@@ -3,11 +3,11 @@ Community Legal Services in East Palo Alto(CLSEPA) seeks to empower tenants to c
 
 ## Steps
 ### 1. Set up venv virtual environment
-####	a. python -m venv venv
-####	b. source venv/bin/activate
+	a. python -m venv venv
+	b. source venv/bin/activate
 ###	2. Install packages from requirements.txt
-####	pip install <package_name>
+	pip install <package_name>
 ### 3. Run src/main.py
-####	python src/main.py
+	python src/main.py
 ### 4. Deactivate the virtual environment
-#### deactivate
+	deactivate
