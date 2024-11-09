@@ -1,15 +1,15 @@
 [
   {
-    "case_number": null,
-    "petitioner_name": null,
-    "respondent_name": null,
-    "city": null,
-    "petitioner_issues_summary": "This legal document does not contain any petitioner_issues.",
-    "respondent_issues_summary": "The summary you provided does not contain any information about \"respondent_issues,\" so I am unable to generate a summary.",
-    "hearing_points_summary": "Failed to generate summary: 429 Resource has been exhausted (e.g. check quota).",
-    "final_decision_summary": "There is no final decision provided in the text, so I am unable to generate a summary.",
-    "is_appeal": false,
-    "appeal_subject": null,
-    "appeal_decision": null
+    "case_number": "C23240003 and C23240004",
+    "petitioner_name": "Delma Maciel",
+    "respondent_name": "TayCon Properties",
+    "city": "Mountain View",
+    "petitioner_issues_summary": "The petitioner alleges several legal issues with the property management company, including inaccuracies in calculating base rent, unauthorized adjustments, illegal charges for utilities and insurance, negligence in maintaining the property, and improper reduction of housing services.",
+    "respondent_issues_summary": "Respondent denies petitioner's allegations regarding access to contractors and persistent parking issues. Respondent asserts that the petitioner was responsible for the toilet clog, and that pool closures were reasonable due to specific circumstances. The condition of the laundry room is disputed, and the respondent contends that CSFRA regulations regarding rent concessions do not apply in this case.",
+    "hearing_points_summary": "The petitioner successfully demonstrated that the respondent unlawfully demanded excessive rent, failed to provide habitable conditions, and reduced housing services. The petitioner is entitled to various rent refunds and ongoing rent reductions until the issues are resolved, including for unlawfully charged insurance, bathtub issues, plumbing problems, lack of parking access, and laundry room conditions. However, the petitioner's claim regarding pool closures was not substantiated.",
+    "final_decision_summary": "The Regulatory Health Council (RHC) has dismissed the appeal, upholding the original decision in its entirety. The appellant's arguments and objections were deemed insufficient to overturn the initial ruling.",
+    "is_appeal": true,
+    "appeal_subject": "Several elements of the Hearing Officer Decision",
+    "appeal_decision": "The RHC affirms the Decision in its entirety"
   }
 ]

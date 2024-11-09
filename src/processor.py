@@ -36,9 +36,9 @@ class LegalDocumentProcessor:
             return json.loads(response_text)
         except json.JSONDecodeError as e:
             print(f"Error parsing LLM response: {e}")
-            # Implement additional error handling or partial parsing logic here (optional)
-            return {}  # Return an empty dictionary in case of parsing failure
-
+            # Log the error and the problematic LLM response for debugging
+            # Consider using a more lenient JSON parser or regular expressions to extract information
+            return {}  # Return an empty dictionary as a fallback
         
     def extract_text_from_pdf(self, pdf_path: str) -> str:
         """Extract text content from PDF file."""
@@ -80,7 +80,7 @@ class LegalDocumentProcessor:
         """
 
 
-    def extract_information(self, text: str) -> LegalDocument:
+    def extract_information(self, text: str) -> Optional[LegalDocument]:
         """Extract key information from document text using Gemini model."""
         prompt = self._create_extraction_prompt(text)
         response = self.model.generate_content(prompt)
@@ -91,16 +91,10 @@ class LegalDocumentProcessor:
                 content = content.split('```json')[1].split('```')[0].strip()
             result = json.loads(content)
 
-            # Ensure all required fields are present in the parsed JSON
-            required_fields = ['case_number', 'petitioner_name', 'respondent_name', 'city', 'petitioner_issues', 'respondent_issues', 'hearing_points', 'final_decision', 'is_appeal', 'appeal_subject', 'appeal_decision']
-            for field in required_fields:
-                if field not in result:
-                    raise ValueError(f"Missing required field: {field}")
-
             return LegalDocument(**result)
         except Exception as e:
-            raise ValueError(f"Failed to parse LLM output: {e}")
-
+            print(f"Error parsing LLM output: {e}")
+            return None  # Or handle the error differently, e.g., log the issue and continue
 
     def summarize_field(self, text: str, field: str) -> str:
         """Generate a summary for a specific field using Gemini model."""
