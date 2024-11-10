@@ -1,3 +1,7 @@
 google-generativeai
 PyMuPDF
 python-dotenv
+chromadb
+sentence-transformers
+streamlit>=1.30.0
+
